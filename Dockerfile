@@ -9,6 +9,8 @@ RUN apt-get update && apt-get install -y curl zip && \
     unzip awscliv2.zip && \
     ./aws/install && \
     rm awscliv2.zip && \
-    rm -rf aws
+    rm -rf aws && \
+    apt-get purge -y --auto-remove curl zip && \ 
+    rm -rf /var/lib/apt/lists/*
 
 ENTRYPOINT ["/usr/bin/bash"]
