@@ -13,4 +13,4 @@ RUN apt-get update && apt-get install -y curl zip && \
     apt-get purge -y --auto-remove zip && \ 
     rm -rf /var/lib/apt/lists/*
 
-ENTRYPOINT ["/usr/bin/bash"]
+ENTRYPOINT ["/usr/bin/sleep", "9999999"]

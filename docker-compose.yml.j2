@@ -1,0 +1,9 @@
+version: '3.5' 
+
+services:
+    tf-container: 
+      image: "{{ docker_image }}"
+      volumes: 
+        - {{ terraform_host_files }}:/terraform
+        - {{ aws_config_dir }}:/root/.aws/
+      container_name: tf-container
